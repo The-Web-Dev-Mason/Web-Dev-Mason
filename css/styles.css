@@ -615,3 +615,27 @@ body {
         transform: none;
     }
 }
+
+.thank-you-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.thank-you-page h1 {
+    margin-bottom: 1rem;
+}
+
+.thank-you-page p {
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .thank-you-page {
+        padding: 1rem;
+    }
+}

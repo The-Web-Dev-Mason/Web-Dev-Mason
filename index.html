@@ -119,10 +119,17 @@
     <section id="contact" class="contact">
         <h2>Get In Touch</h2>
         <div class="contact-container">
-            <form class="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Your Message" required></textarea>
+            <form class="contact-form" action="https://formsubmit.co/TheWebDevMason@outlook.com" method="POST">
+                <!-- Customize your success page -->
+                <input type="hidden" name="_next" value="https://the-web-dev-mason.github.io/Web-Dev-Mason/thanks.html">
+                <!-- Prevent spam -->
+                <input type="hidden" name="_captcha" value="true">
+                <!-- Email template subject -->
+                <input type="hidden" name="_subject" value="New Contact Form Submission - Web-Dev Mason">
+                
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
                 <button type="submit" class="submit-button">Send Message</button>
             </form>
         </div>
