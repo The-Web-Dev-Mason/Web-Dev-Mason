@@ -446,3 +446,172 @@ footer {
         display: flex;
     }
 }
+
+/* Base styles for better mobile experience */
+* {
+    box-sizing: border-box;
+}
+
+/* Navigation refinements */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 1rem;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .nav-links li {
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Service cards enhancement */
+@media screen and (max-width: 768px) {
+    .service-card {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    
+    .service-card i {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Portfolio improvements */
+@media screen and (max-width: 768px) {
+    .portfolio-overlay {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    
+    .portfolio-overlay h3 {
+        font-size: 1.2rem;
+    }
+    
+    .portfolio-overlay p {
+        font-size: 0.9rem;
+    }
+    
+    .view-project {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* About section adjustments */
+@media screen and (max-width: 768px) {
+    .about-content {
+        padding: 1rem;
+    }
+    
+    .tech-stack {
+        margin-top: 2rem;
+    }
+    
+    .tech-icons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        justify-items: center;
+    }
+    
+    .tech-icons i {
+        font-size: 2rem;
+    }
+}
+
+/* Contact form enhancements */
+@media screen and (max-width: 768px) {
+    .contact-container {
+        padding: 1rem;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        margin-bottom: 1rem;
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    .submit-button {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Button and interactive elements */
+@media screen and (max-width: 768px) {
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    button,
+    .submit-button,
+    .cta-button {
+        /* Make buttons easier to tap on mobile */
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Typography adjustments */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+/* Add smooth scrolling for better mobile experience */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scrolling on mobile */
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Add touch-friendly hover states */
+@media (hover: none) {
+    .portfolio-item:hover .portfolio-overlay,
+    .service-card:hover,
+    .cta-button:hover {
+        transform: none;
+    }
+}
