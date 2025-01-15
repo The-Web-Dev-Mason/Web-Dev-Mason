@@ -120,12 +120,14 @@
         <h2>Get In Touch</h2>
         <div class="contact-container">
             <form class="contact-form" action="https://formsubmit.co/TheWebDevMason@outlook.com" method="POST">
-                <!-- Customize your success page -->
+                <!-- Use the exact email with no spaces -->
                 <input type="hidden" name="_next" value="https://the-web-dev-mason.github.io/Web-Dev-Mason/thanks.html">
-                <!-- Prevent spam -->
                 <input type="hidden" name="_captcha" value="true">
-                <!-- Email template subject -->
                 <input type="hidden" name="_subject" value="New Contact Form Submission - Web-Dev Mason">
+                
+                <!-- Add these spam prevention fields -->
+                <input type="text" name="_honey" style="display: none">
+                <input type="hidden" name="_template" value="table">
                 
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="email" name="email" placeholder="Email" required>
