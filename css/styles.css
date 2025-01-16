@@ -33,6 +33,11 @@ nav {
     z-index: 1000;
 }
 
+nav li {
+    position: relative;
+}
+
+
 .logo {
     display: flex;
     align-items: center;
@@ -76,9 +81,20 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--primary-color);
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
 }
 
+nav a:hover {
+    color: white;
+    background-color: var(--primary-color);
+}
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -127,21 +143,34 @@ nav a:hover {
     }
 }
 
+/* Animation keyframes for service icons */
+@keyframes floatIcon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes pulseIcon {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes spinIcon {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 .hero-logo {
     height: 200px;
     width: auto;
     margin-bottom: 2rem;
     object-fit: contain;
-    /* Add animation */
-    animation: spin 20s linear infinite; /* Adjust '20s' to make it spin faster or slower */
+    animation: spin 20s linear infinite;
 }
 
-/* Add hover pause effect */
 .hero-logo:hover {
     animation-play-state: paused;
 }
 
-/* Make hero logo responsive */
 @media screen and (max-width: 768px) {
     .hero-logo {
         height: 150px;
@@ -180,10 +209,32 @@ nav a:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Updated service card icon styles */
 .service-card i {
     font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
+    display: inline-block;
+}
+
+/* Apply specific animations to each service icon */
+.service-card:nth-of-type(1) i {
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+.service-card:nth-of-type(2) i {
+    animation: pulseIcon 3s ease-in-out infinite;
+}
+
+.service-card:nth-of-type(3) i {
+    animation: spinIcon 8s linear infinite;
+}
+
+/* Hover effects for service icons */
+.service-card:hover i {
+    animation-play-state: paused;
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
 }
 
 /* Portfolio Section */
@@ -382,14 +433,80 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Burger Menu Styles */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1000;
+}
+
+.burger-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        padding: 1rem 2rem;
+        width: 100%;
+    }
+
+    nav a:hover {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        background: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transition: right 0.5s ease;
+        gap: 2rem;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    /* Burger Animation */
+    .burger-menu.active .line1 {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger-menu.active .line2 {
+        opacity: 0;
+    }
+
+    .burger-menu.active .line3 {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     nav {
         padding: 1rem 5%;
-    }
-
-    nav ul {
-        display: none; /* You'll need JavaScript for a mobile menu */
     }
 
     .hero-content h1 {
@@ -419,160 +536,15 @@ footer {
     .portfolio {
         padding: 5rem 5%;
     }
-}
-
-/* Burger Menu Styles */
-.burger {
-    display: none;
-    cursor: pointer;
-}
-
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-color);
-    margin: 5px;
-    transition: all 0.3s ease;
-}
-
-@media screen and (max-width: 768px) {
-    .burger {
-        display: block;
-        z-index: 2;
-    }
-
-    .nav-links {
-        position: fixed;
-        right: -100%;
-        top: 0;
-        height: 100vh;
-        background: var(--white);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        transition: right 0.5s ease;
-        gap: 2rem;
-    }
-
-    .nav-links.active {
-        right: 0;
-    }
-
-    /* Burger Animation */
-    .burger.active .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .burger.active .line2 {
-        opacity: 0;
-    }
-
-    .burger.active .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-}
-
-.burger-menu {
-    display: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-}
-
-@media screen and (max-width: 768px) {
-    .burger-menu {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        width: 100%;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background: #fff;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-}
-
-/* Base styles for better mobile experience */
-* {
-    box-sizing: border-box;
-}
-
-/* Navigation refinements */
-@media screen and (max-width: 768px) {
-    nav {
-        padding: 1rem;
-    }
     
-    .logo {
-        font-size: 1.2rem;
-    }
-    
-    .nav-links li {
-        padding: 1rem 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    }
-    
-    .nav-links li:last-child {
-        border-bottom: none;
-    }
-}
-
-/* Service cards enhancement */
-@media screen and (max-width: 768px) {
     .service-card {
         padding: 1.5rem;
         text-align: center;
     }
     
-    .service-card i {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-    
     .service-card h3 {
         font-size: 1.3rem;
         margin-bottom: 0.5rem;
-    }
-}
-
-/* Portfolio improvements */
-@media screen and (max-width: 768px) {
-    .portfolio-overlay {
-        opacity: 1;
-        background: rgba(0, 0, 0, 0.7);
-    }
-    
-    .portfolio-overlay h3 {
-        font-size: 1.2rem;
-    }
-    
-    .portfolio-overlay p {
-        font-size: 0.9rem;
-    }
-    
-    .view-project {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
-}
-
-/* About section adjustments */
-@media screen and (max-width: 768px) {
-    .about-content {
-        padding: 1rem;
-    }
-    
-    .tech-stack {
-        margin-top: 2rem;
     }
     
     .tech-icons {
@@ -585,10 +557,7 @@ footer {
     .tech-icons i {
         font-size: 2rem;
     }
-}
-
-/* Contact form enhancements */
-@media screen and (max-width: 768px) {
+    
     .contact-container {
         padding: 1rem;
     }
@@ -605,26 +574,14 @@ footer {
         padding: 1rem;
         font-size: 1rem;
     }
-}
 
-/* Button and interactive elements */
-@media screen and (max-width: 768px) {
-    .cta-button {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-    }
-    
     button,
     .submit-button,
     .cta-button {
-        /* Make buttons easier to tap on mobile */
         min-height: 44px;
         min-width: 44px;
     }
-}
-
-/* Typography adjustments */
-@media screen and (max-width: 768px) {
+    
     body {
         font-size: 16px;
         line-height: 1.5;
@@ -650,23 +607,27 @@ footer {
     }
 }
 
-/* Add smooth scrolling for better mobile experience */
+/* Add smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Prevent horizontal scrolling on mobile */
+/* Prevent horizontal scrolling */
 body {
     overflow-x: hidden;
     width: 100%;
 }
 
-/* Add touch-friendly hover states */
+/* Touch-friendly hover states */
 @media (hover: none) {
     .portfolio-item:hover .portfolio-overlay,
     .service-card:hover,
     .cta-button:hover {
         transform: none;
+    }
+    
+    .service-card i {
+        animation-play-state: paused;
     }
 }
 
@@ -682,14 +643,4 @@ body {
 
 .thank-you-page h1 {
     margin-bottom: 1rem;
-}
-
-.thank-you-page p {
-    margin-bottom: 2rem;
-}
-
-@media screen and (max-width: 768px) {
-    .thank-you-page {
-        padding: 1rem;
-    }
 }
