@@ -11,30 +11,36 @@
 </head>
 <body>
     <!-- Navigation -->
-<nav>
-    <div class="logo">
-        <span>Web-Dev Mason</span>
-    </div>
-    <div class="burger-menu">
-        <div class="burger-line line1"></div>
-        <div class="burger-line line2"></div>
-        <div class="burger-line line3"></div>
-    </div>
-    <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+    <nav>
+        <div class="logo">
+            <span>Web-Dev Mason</span>
+        </div>
+        <div class="burger-menu">
+            <div class="burger-line line1"></div>
+            <div class="burger-line line2"></div>
+            <div class="burger-line line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <img src="img/The_Web-dev_Mason-removebg-preview.png" alt="Web-Dev Mason Logo" class="hero-logo">
             <h1>Building Digital Excellence</h1>
             <p>Transforming ideas into powerful web solutions</p>
-            <a href="#contact" class="cta-button">Get Started</a>
+            <div class="hero-cta">
+                <a href="#contact" class="cta-button">Get Started</a>
+                <a href="#portfolio" class="cta-button secondary">View Our Work</a>
+            </div>
         </div>
     </section>
 
@@ -46,16 +52,31 @@
                 <i class="fas fa-code"></i>
                 <h3>Full Stack Development</h3>
                 <p>Custom web applications using React, Node.js, and modern frameworks</p>
+                <ul class="service-features">
+                    <li>Custom Web Applications</li>
+                    <li>E-commerce Solutions</li>
+                    <li>CMS Development</li>
+                </ul>
             </div>
             <div class="service-card">
                 <i class="fas fa-mobile-alt"></i>
                 <h3>Responsive Design</h3>
                 <p>Mobile-first websites that work seamlessly across all devices</p>
+                <ul class="service-features">
+                    <li>Mobile-First Design</li>
+                    <li>Cross-Browser Compatible</li>
+                    <li>Performance Optimized</li>
+                </ul>
             </div>
             <div class="service-card">
                 <i class="fas fa-server"></i>
                 <h3>API Development</h3>
                 <p>Robust and scalable API solutions for your business needs</p>
+                <ul class="service-features">
+                    <li>RESTful APIs</li>
+                    <li>Third-party Integrations</li>
+                    <li>API Documentation</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -64,7 +85,7 @@
     <section id="portfolio" class="portfolio">
         <h2>Our Work</h2>
         <div class="portfolio-grid">
-            <!-- Barber Website -->
+            <!-- Your existing portfolio items -->
             <a href="https://the-web-dev-mason.github.io/TEST/" class="portfolio-item" target="_blank">
                 <img src="img/the-web-dev-mason.github.io_TEST_.png" alt="Barber Website">
                 <div class="portfolio-overlay">
@@ -76,7 +97,6 @@
                 </div>
             </a>
 
-            <!-- Car Rental Website -->
             <a href="https://the-web-dev-mason.github.io/Rental-Car/" class="portfolio-item" target="_blank">
                 <img src="img/the-web-dev-mason.github.io_Rental-Car_.png" alt="Car Rental Website">
                 <div class="portfolio-overlay">
@@ -88,7 +108,6 @@
                 </div>
             </a>
 
-            <!-- Car Service Website -->
             <a href="https://the-web-dev-mason.github.io/CST/" class="portfolio-item" target="_blank">
                 <img src="img/the-web-dev-mason.github.io_CST_.png" alt="Car Service Website">
                 <div class="portfolio-overlay">
@@ -102,19 +121,129 @@
         </div>
     </section>
 
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <h2>Our Development Process</h2>
+        <div class="process-steps">
+            <div class="step">
+                <i class="fas fa-lightbulb"></i>
+                <h3>1. Discovery</h3>
+                <p>Understanding your vision and requirements through detailed consultation</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-pencil-ruler"></i>
+                <h3>2. Planning</h3>
+                <p>Creating comprehensive project roadmap and technical specifications</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-code"></i>
+                <h3>3. Development</h3>
+                <p>Building your solution using cutting-edge technologies</p>
+            </div>
+            <div class="step">
+                <i class="fas fa-check-circle"></i>
+                <h3>4. Launch</h3>
+                <p>Rigorous testing and seamless deployment</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2>Our Packages</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Basic</h3>
+                <div class="price">From £80</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> Static Website</li>
+                    <li><i class="fas fa-check"></i> Responsive Design</li>
+                    <li><i class="fas fa-check"></i> 5 Pages</li>
+                    <li><i class="fas fa-check"></i> Contact Form</li>
+                    <li><i class="fas fa-check"></i> SEO Basic Setup</li>
+                </ul>
+                <a href="#contact" class="pricing-cta">Get Started</a>
+            </div>
+            <div class="pricing-card featured">
+                <div class="featured-label">Most Popular</div>
+                <h3>Professional</h3>
+                <div class="price">From £150</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> Dynamic Website</li>
+                    <li><i class="fas fa-check"></i> CMS Integration</li>
+                    <li><i class="fas fa-check"></i> Up to 10 Pages</li>
+                    <li><i class="fas fa-check"></i> Advanced Forms</li>
+                    <li><i class="fas fa-check"></i> Full SEO Setup</li>
+                    <li><i class="fas fa-check"></i> Social Media Integration</li>
+                </ul>
+                <a href="#contact" class="pricing-cta">Get Started</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <div class="price">Custom</div>
+                <ul>
+                    <li><i class="fas fa-check"></i> Full-Stack Application</li>
+                    <li><i class="fas fa-check"></i> Custom Features</li>
+                    <li><i class="fas fa-check"></i> Unlimited Pages</li>
+                    <li><i class="fas fa-check"></i> Database Integration</li>
+                    <li><i class="fas fa-check"></i> Advanced Analytics</li>
+                    <li><i class="fas fa-check"></i> Priority Support</li>
+                </ul>
+                <a href="#contact" class="pricing-cta">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <i class="fas fa-check-circle"></i>
+                <h3>50+</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-smile"></i>
+                <h3>40+</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-code-branch"></i>
+                <h3>1000+</h3>
+                <p>Commits Made</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <h3>99%</h3>
+                <p>On-Time Delivery</p>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="about">
         <h2>About Us</h2>
         <div class="about-content">
             <p>We are a team of passionate developers dedicated to creating exceptional web experiences. With expertise in React, Node.js, and full-stack development, we transform ideas into powerful digital solutions.</p>
-            <div class="tech-stack">
-                <h3>Our Tech Stack</h3>
-                <div class="tech-icons">
-                    <i class="fab fa-react"></i>
-                    <i class="fab fa-node-js"></i>
-                    <i class="fab fa-js"></i>
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
+            
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <h4>Frontend Development</h4>
+                    <ul>
+                        <li><i class="fab fa-react"></i> React.js</li>
+                        <li><i class="fab fa-js"></i> JavaScript</li>
+                        <li><i class="fab fa-html5"></i> HTML5</li>
+                        <li><i class="fab fa-css3-alt"></i> CSS3/SASS</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <h4>Backend Development</h4>
+                    <ul>
+                        <li><i class="fab fa-node-js"></i> Node.js</li>
+                        <li><i class="fas fa-database"></i> MongoDB</li>
+                        <li><i class="fas fa-server"></i> Express.js</li>
+                        <li><i class="fas fa-lock"></i> REST APIs</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -125,26 +254,35 @@
         <h2>Get In Touch</h2>
         <div class="contact-container">
             <form class="contact-form" action="https://formsubmit.co/TheWebDevMason@outlook.com" method="POST">
-                <!-- Use the exact email with no spaces -->
                 <input type="hidden" name="_next" value="https://the-web-dev-mason.github.io/Web-Dev-Mason/thanks.html">
                 <input type="hidden" name="_captcha" value="true">
                 <input type="hidden" name="_subject" value="New Contact Form Submission - Web-Dev Mason">
-                
-                <!-- Add these spam prevention fields -->
                 <input type="text" name="_honey" style="display: none">
                 <input type="hidden" name="_template" value="table">
                 
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <select name="service" required>
+                        <option value="">Select Service</option>
+                        <option value="basic">Basic Package</option>
+                        <option value="professional">Professional Package</option>
+                        <option value="enterprise">Enterprise Package</option>
+                        <option value="custom">Custom Project</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Project Details" required></textarea>
+                </div>
                 <button type="submit" class="submit-button">Send Message</button>
             </form>
         </div>
     </section>
-    
-    <a href="tel:07523948426" class="floating-phone">
-        <i class="fas fa-phone"></i>
-    </a>
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -152,16 +290,42 @@
                 <h3>Web-Dev Mason</h3>
                 <p>Building the future of web technology</p>
             </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">API Development</a></li>
+                        <li><a href="#services">UI/UX Design</a></li>
+                        <li><a href="#services">Maintenance</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Web-Dev Mason. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Floating Phone Button -->
+    <a href="tel:07523948426" class="floating-phone">
+        <i class="fas fa-phone"></i>
+    </a>
 
     <script src="scripts/script.js"></script>
 </body>
