@@ -644,3 +644,50 @@ body {
 .thank-you-page h1 {
     margin-bottom: 1rem;
 }
+
+.floating-phone {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.floating-phone i {
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.floating-phone:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+.floating-phone:hover i {
+    transform: scale(1.1);
+}
+
+/* Adjust for mobile */
+@media screen and (max-width: 768px) {
+    .floating-phone {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .floating-phone i {
+        font-size: 1.25rem;
+    }
+}
