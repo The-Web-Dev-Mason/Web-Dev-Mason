@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Web-Dev Mason - Building Digital Excellence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0066FF;
+            --text-color: #333333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            line-height: 1.2;
+            color: var(--text-color);
+            background: var(--white);
+            font-size: 10pt;
+        }
+
+        .leaflet {
+            width: 148mm; /* A5 width */
+            height: 210mm; /* A5 height */
+            margin: 0 auto;
+            padding: 15mm 10mm;
+            position: relative;
+            background: var(--white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 1rem;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 2rem;
+            object-fit: contain;
+        }
+
+        .tagline {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+        }
+
+        .tagline-split {
+            display: block;
+        }
+
+        .sub-tagline {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 0 0 3rem 0;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .service-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .service-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .service-card p {
+            font-size: 0.8rem;
+            line-height: 1.2;
+            color: var(--text-color);
+        }
+
+        .contact-section {
+            text-align: center;
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .contact-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .contact-section p {
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+
+        .footer {
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            font-size: 0.8rem;
+            color: var(--text-color);
+        }
+
+        .footer p {
+            margin: 0.15rem 0;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .leaflet {
+                width: 148mm;
+                height: 210mm;
+                padding: 15mm 10mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="leaflet">
+        <div class="header">
+            <img src="img/The_Web-dev_Mason-removebg-preview.png" alt="The Web-Dev Mason Logo" class="logo">
+            <h1 class="tagline">
+                <span class="tagline-split">Building Digital</span>
+                <span class="tagline-split">Excellence</span>
+            </h1>
+            <p class="sub-tagline">Transforming ideas into powerful web solutions</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Full Stack Development</h3>
+                <p>Custom web apps with modern tech</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Responsive Design</h3>
+                <p>Mobile-first websites</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-server"></i>
+                <h3>API Development</h3>
+                <p>Scalable API solutions</p>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>Transform Your Digital Presence</h2>
+            <p>Free consultation and quote</p>
+        </div>
+
+        <div class="footer">
+            <p><strong>The Web-Dev Mason</strong></p>
+            <p>Email: thewebdevmason@outlook.com</p>
+            <p>Phone: 07469848519 | www.webdevmason.com</p>
+        </div>
+    </div>
+</body>
+</html> 
