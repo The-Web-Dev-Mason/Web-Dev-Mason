@@ -314,11 +314,11 @@ nav {
 
 .hero-logo {
     width: 160px;
-    /* Increased from 120px */
     height: auto;
     margin: 0 auto var(--space-md);
-    filter: brightness(0) invert(1) drop-shadow(0 0 20px rgba(0, 124, 137, 0.4));
-    /* Glow effect */
+    /* Filter removed */
+    border-radius: 50%;
+    /* Clip white corners */
     animation: float 6s ease-in-out infinite;
 }
 
