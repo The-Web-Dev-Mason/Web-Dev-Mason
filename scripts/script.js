@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger-menu');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
-    
+
     burger.addEventListener('click', () => {
         // Toggle navigation
         nav.classList.toggle('active');
         burger.classList.toggle('active');
-        
+
         // Animate links
         navLinks.forEach((link, index) => {
             if (link.style.animation) {
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    
+
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!nav.contains(e.target) && !burger.contains(e.target) && nav.classList.contains('active')) {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             burger.classList.remove('active');
         }
     });
-    
+
     // Close menu when clicking a link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
@@ -63,7 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
+                if (entry.target.classList.contains('reveal')) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.add('fade-in');
+                }
                 observer.unobserve(entry.target);
             }
         });
@@ -75,45 +79,17 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    // Stats counter animation
-    const stats = document.querySelectorAll('.stat-item h3');
-    const statsObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const target = entry.target;
-                const targetNumber = parseFloat(target.textContent);
-                let currentNumber = 0;
-                const duration = 2000; // 2 seconds
-                const steps = 60;
-                const increment = targetNumber / steps;
-                let currentStep = 0;
-
-                const counter = setInterval(() => {
-                    currentNumber += increment;
-                    currentStep++;
-
-                    if (currentStep === steps) {
-                        currentNumber = targetNumber;
-                        clearInterval(counter);
-                    }
-
-                    target.textContent = Math.round(currentNumber) + 
-                        (target.textContent.includes('%') ? '%' : '+');
-                }, duration / steps);
-
-                observer.unobserve(target);
-            }
-        });
-    }, observerOptions);
-
-    stats.forEach(stat => {
-        statsObserver.observe(stat);
+    // Observe reveal elements
+    document.querySelectorAll('.reveal').forEach(el => {
+        observer.observe(el);
     });
+
+
 
     // Form validation and handling
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             // Form is already being handled by FormSubmit
             // Add any additional validation here if needed
             const formData = new FormData(this);
@@ -176,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
+
         if (scrollTop > lastScrollTop && scrollTop > 500) {
             // Scrolling down & past 500px - hide button
             floatingPhone.style.transform = 'translateY(100px)';
@@ -184,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Scrolling up or near top - show button
             floatingPhone.style.transform = 'translateY(0)';
         }
-        
+
         lastScrollTop = scrollTop;
     });
 

@@ -1,0 +1,94 @@
+:root {
+  /* =========================================
+     Color Palette - Premium Dark Theme
+     ========================================= */
+  
+  /* Backgrounds - Deep, layered & atmospheric */
+  --bg-base: #0a0a0f;           /* Main page background */
+  --bg-elevated: #12121a;       /* Cards, sections, panels */
+  --bg-surface: #1a1a24;        /* Interactive surfaces (inputs, active items) */
+  --bg-hover: #22222e;          /* Hover states */
+  --bg-glass: rgba(18, 18, 26, 0.8); /* Glassmorphism background */
+  
+  /* Accents - Sophisticated Teal/Cyan */
+  --accent-primary: #007c89;    /* Main brand color */
+  --accent-light: #00a4b4;      /* Lighter accent for gradients/hovers */
+  --accent-dark: #005a63;       /* Darker accent for active states */
+  --accent-glow: rgba(0, 124, 137, 0.15);  /* Subtle atmospheric glow */
+  --accent-border: rgba(0, 124, 137, 0.3); /* Borders on active elements */
+  
+  /* Text - High contrast hierarchy */
+  --text-primary: #f8f8fc;      /* Headlines, primary actions */
+  --text-secondary: #a0a0b0;    /* Body text, descriptions */
+  --text-muted: #5a5a6e;        /* Metadata, labels, placeholders */
+  --text-accent: #00a4b4;       /* Text links, highlights */
+  --text-inverse: #0a0a0f;      /* Text on accent backgrounds */
+
+  /* Borders - Subtle definition */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.15);
+  
+  /* Status Colors */
+  --status-success: #10b981;
+  --status-error: #ef4444;
+  --status-warning: #f59e0b;
+
+  /* =========================================
+     Typography
+     ========================================= */
+  
+  /* Fonts */
+  --font-display: 'Sora', sans-serif;       /* Headings */
+  --font-body: 'Outfit', sans-serif;        /* Body text */
+  --font-mono: 'JetBrains Mono', monospace; /* Code snippets if any */
+
+  /* Font Weights */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* =========================================
+     Spacing & Layout
+     ========================================= */
+  
+  --page-padding: 2rem;
+  --max-width: 1200px;
+  --header-height: 80px;
+  
+  /* Spacing Scale */
+  --space-xs: 0.5rem;   /* 8px */
+  --space-sm: 1rem;     /* 16px */
+  --space-md: 1.5rem;   /* 24px */
+  --space-lg: 2rem;     /* 32px */
+  --space-xl: 3rem;     /* 48px */
+  --space-2xl: 5rem;    /* 80px */
+  
+  /* Border Radius */
+  --radius-sm: 0.5rem;  /* 8px */
+  --radius-md: 0.75rem; /* 12px */
+  --radius-lg: 1rem;    /* 16px */
+  --radius-xl: 1.5rem;  /* 24px */
+  --radius-full: 9999px;
+
+  /* =========================================
+     Effects
+     ========================================= */
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 20px rgba(0, 124, 137, 0.2);
+  
+  /* Transitions */
+  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 150ms var(--ease-out);
+  --transition-normal: 250ms var(--ease-out);
+  --transition-slow: 400ms var(--ease-out);
+  
+  /* Backdrop Blur */
+  --blur-glass: blur(20px);
+}

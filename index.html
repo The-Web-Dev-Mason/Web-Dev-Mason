@@ -1,332 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Web-Dev Mason | Web Development Agency</title>
+    <title>Web-Dev Mason | Automated Booking Systems & Web Design in UK</title>
+    <meta name="description"
+        content="We build websites that get you customers. From automated booking systems for barbers to restaurant digital tools and modern websites. Local UK developer.">
+    <meta name="keywords"
+        content="web design, booking systems, restaurant tools, digital agency, UK web developer, barber website, garage website">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:url" content="https://the-web-dev-mason.github.io/Web-Dev-Mason/">
+    <meta property="og:title" content="Web-Dev Mason | Websites That Get You Customers">
+    <meta property="og:description"
+        content="Stop answering the phone all day. Let customers book appointments 24/7 automatically. Professional web solutions for local businesses.">
+    <meta property="og:image"
+        content="https://the-web-dev-mason.github.io/Web-Dev-Mason/img/The_Web-dev_Mason-removebg-preview.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://the-web-dev-mason.github.io/Web-Dev-Mason/">
+    <meta property="twitter:title" content="Web-Dev Mason | Websites That Get You Customers">
+    <meta property="twitter:description"
+        content="Stop answering the phone all day. Let customers book appointments 24/7 automatically. Professional web solutions for local businesses.">
+    <meta property="twitter:image"
+        content="https://the-web-dev-mason.github.io/Web-Dev-Mason/img/The_Web-dev_Mason-removebg-preview.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "The Web-Dev Mason",
+      "image": "https://the-web-dev-mason.github.io/Web-Dev-Mason/img/The_Web-dev_Mason-removebg-preview.png",
+      "description": "Helping local businesses grow with better technology. Specialized in automated booking systems and digital restaurant tools.",
+      "url": "https://the-web-dev-mason.github.io/Web-Dev-Mason/",
+      "telephone": "07523948426",
+      "email": "TheWebDevMason@outlook.com",
+      "priceRange": "£100 - £500+",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "UK"
+      },
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Nayim Ali",
+          "jobTitle": "CEO & Lead Full-Stack Engineer"
+        },
+        {
+          "@type": "Person",
+          "name": "Uzair Ishaq",
+          "jobTitle": "Co-Founder & Senior Full-Stack Engineer"
+        }
+      ]
+    }
+    </script>
+
     <link rel="icon" type="image/x-icon" href="img/The_Web-dev_Mason-removebg-preview.png">
+
+    <!-- Preconnect for Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Font Awesome for icons -->
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
+    <!-- Ambient Background -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div
+            style="position: fixed; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at center, rgba(0, 124, 137, 0.03) 0%, transparent 50%);">
+        </div>
+    </div>
+
     <!-- Navigation -->
-    <nav>
-        <div class="logo">
-            <span>The Web-Dev Mason</span>
+    <nav class="glass">
+        <div class="nav-container">
+
+
+            <div class="burger-menu">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#work">Our Work</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact" class="text-accent">Contact</a></li>
+            </ul>
         </div>
-        <div class="burger-menu">
-            <div class="burger-line line1"></div>
-            <div class="burger-line line2"></div>
-            <div class="burger-line line3"></div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero section">
         <div class="hero-content">
             <img src="img/The_Web-dev_Mason-removebg-preview.png" alt="Web-Dev Mason Logo" class="hero-logo">
-            <h1>Building Digital Excellence</h1>
-            <p>Transforming ideas into powerful web solutions</p>
-            <div class="hero-cta">
-                <a href="#contact" class="cta-button">Get Started</a>
-                <a href="#portfolio" class="cta-button secondary">View Our Work</a>
+            <h1 class="headline-xl reveal reveal-delay-1">We Build Websites That Get You Customers</h1>
+            <p class="body-lg reveal reveal-delay-2">From automated booking systems to digital restaurant tools. We save
+                you time so you can
+                run your business.</p>
+            <div class="hero-cta reveal reveal-delay-3">
+                <a href="#contact" class="btn btn-primary">
+                    Get A Free Quote <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#work" class="btn btn-secondary">See Real Examples</a>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-code"></i>
-                <h3>Full Stack Development</h3>
-                <p>Custom web applications using React, Node.js, and modern frameworks</p>
-                <ul class="service-features">
-                    <li>Custom Web Applications</li>
-                    <li>E-commerce Solutions</li>
-                    <li>CMS Development</li>
-                </ul>
+    <!-- Solutions Section -->
+    <section id="solutions" class="section">
+        <div class="container">
+            <div class="text-center mb-16" style="margin-bottom: 4rem; text-align: center;">
+                <h2 class="headline-lg">How We Help You</h2>
             </div>
-            <div class="service-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Responsive Design</h3>
-                <p>Mobile-first websites that work seamlessly across all devices</p>
-                <ul class="service-features">
-                    <li>Mobile-First Design</li>
-                    <li>Cross-Browser Compatible</li>
-                    <li>Performance Optimized</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-server"></i>
-                <h3>API Development</h3>
-                <p>Robust and scalable API solutions for your business needs</p>
-                <ul class="service-features">
-                    <li>RESTful APIs</li>
-                    <li>Third-party Integrations</li>
-                    <li>API Documentation</li>
-                </ul>
+
+            <div class="services-grid">
+                <div class="service-card reveal reveal-delay-1">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Booking Systems</h3>
+                    <p class="text-secondary">Stop answering the phone all day. Let customers book appointments 24/7
+                        automatically.</p>
+                    <ul class="service-features">
+                        <li>Perfect for Barbers & Garages</li>
+                        <li>Sends Email Confirmations</li>
+                        <li>Prevents Double-Bookings</li>
+                    </ul>
+                </div>
+
+                <div class="service-card reveal reveal-delay-2">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Restaurant Tools</h3>
+                    <p class="text-secondary">Digital tools to help your staff. Like our "Digital Waiter" that lets
+                        customers request service from their table.</p>
+                    <ul class="service-features">
+                        <li>Request Cutlery/Sauces</li>
+                        <li>Call for Bill</li>
+                        <li>Works on any Phone</li>
+                    </ul>
+                </div>
+
+                <div class="service-card reveal reveal-delay-3">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Modern Websites</h3>
+                    <p class="text-secondary">A professional face for your business that looks perfect on every iPhone
+                        and Android.</p>
+                    <ul class="service-features">
+                        <li>Rank Higher on Google</li>
+                        <li>Fast Loading Speed</li>
+                        <li>Click-to-Call Buttons</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <h2>Our Work</h2>
-        <div class="portfolio-grid">
-            <!-- Your existing portfolio items -->
-            <a href="https://the-web-dev-mason.github.io/TEST/" class="portfolio-item" target="_blank">
-                <img src="img/the-web-dev-mason.github.io_TEST_.png" alt="Barber Website">
-                <div class="portfolio-overlay">
-                    <h3>Turkish Barber Website</h3>
-                    <p>HTML, CSS, Responsive Design</p>
-                    <div class="portfolio-links">
-                        <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            </a>
+    <!-- Work Section -->
+    <section id="work" class="section">
+        <div class="container">
+            <div class="text-center mb-16" style="margin-bottom: 4rem; text-align: center;">
+                <h2 class="headline-lg">Real Results</h2>
+            </div>
 
-            <a href="https://the-web-dev-mason.github.io/Laundry-Dev-main/" class="portfolio-item" target="_blank">
-                <img src="img/_C__Users_Nayim672_Documents_Nayim_Coding_Sandbox_Laundry-Dev-main_index.html(iPad Pro) (2).png" alt="Car Rental Website">
-                <div class="portfolio-overlay">
-                    <h3>Luxury Car Rental Platform</h3>
-                    <p>HTML, CSS, JavaScript</p>
-                    <div class="portfolio-links">
-                        <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+            <div class="portfolio-grid">
+                <a href="https://the-web-dev-mason.github.io/TEST/" class="portfolio-item reveal reveal-delay-1"
+                    target="_blank">
+                    <img src="img/the-web-dev-mason.github.io_TEST_.png" alt="Barber Website">
+                    <div class="portfolio-overlay">
+                        <h3>Barber Website</h3>
+                        <p class="text-muted">Automated Booking System</p>
+                        <span class="view-project">View Project <i class="fas fa-external-link-alt"></i></span>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="https://the-web-dev-mason.github.io/Garage-Service/" class="portfolio-item" target="_blank">
-                <img src="img/the-web-dev-mason.github.io_CST_.png" alt="Car Service Website">
-                <div class="portfolio-overlay">
-                    <h3>Auto Care Services</h3>
-                    <p>HTML, CSS, Booking System</p>
-                    <div class="portfolio-links">
-                        <span class="view-project">View Project <i class="fas fa-arrow-right"></i></span>
+                <a href="https://the-web-dev-mason.github.io/Laundry-Dev-main/"
+                    class="portfolio-item reveal reveal-delay-2" target="_blank">
+                    <img src="img/_C__Users_Nayim672_Documents_Nayim_Coding_Sandbox_Laundry-Dev-main_index.html(iPad Pro) (2).png"
+                        alt="Laundry Website">
+                    <div class="portfolio-overlay">
+                        <h3>Laundry Website</h3>
+                        <p class="text-muted">Digital Catalog</p>
+                        <span class="view-project">View Project <i class="fas fa-external-link-alt"></i></span>
                     </div>
-                </div>
-            </a>
+                </a>
+
+                <a href="https://the-web-dev-mason.github.io/Garage-Service/"
+                    class="portfolio-item reveal reveal-delay-3" target="_blank">
+                    <img src="img/the-web-dev-mason.github.io_CST_.png" alt="Car Service Website">
+                    <div class="portfolio-overlay">
+                        <h3>Car Service Website</h3>
+                        <p class="text-muted">Service Appointment Tool</p>
+                        <span class="view-project">View Project <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Process Section -->
-    <section id="process" class="process">
-        <h2>Our Development Process</h2>
-        <div class="process-steps">
-            <div class="step">
-                <i class="fas fa-lightbulb"></i>
-                <h3>1. Discovery</h3>
-                <p>Understanding your vision and requirements through detailed consultation</p>
+    <section id="process" class="section" style="background: var(--bg-elevated);">
+        <div class="container">
+            <div class="text-center mb-16" style="margin-bottom: 4rem; text-align: center;">
+                <h2 class="headline-lg">Simple 4-Step Process</h2>
             </div>
-            <div class="step">
-                <i class="fas fa-pencil-ruler"></i>
-                <h3>2. Planning</h3>
-                <p>Creating comprehensive project roadmap and technical specifications</p>
-            </div>
-            <div class="step">
-                <i class="fas fa-code"></i>
-                <h3>3. Development</h3>
-                <p>Building your solution using cutting-edge technologies</p>
-            </div>
-            <div class="step">
-                <i class="fas fa-check-circle"></i>
-                <h3>4. Launch</h3>
-                <p>Rigorous testing and seamless deployment</p>
+
+            <div class="grid grid-2"> <!-- using grid utility -->
+                <div class="card reveal reveal-delay-1">
+                    <h3 class="text-accent">1. We Chat</h3>
+                    <p class="text-secondary">We discuss your business problems (not code) to find the right solution.
+                    </p>
+                </div>
+                <div class="card reveal reveal-delay-2">
+                    <h3 class="text-accent">2. We Plan</h3>
+                    <p class="text-secondary">We design a look that fits your brand and map out the features.</p>
+                </div>
+                <div class="card reveal reveal-delay-3">
+                    <h3 class="text-accent">3. We Build</h3>
+                    <p class="text-secondary">We build your site quickly, ensuring it works on all devices.</p>
+                </div>
+                <div class="card reveal reveal-delay-4">
+                    <h3 class="text-accent">4. You Launch</h3>
+                    <p class="text-secondary">We put it online and show you how to use it. No stress.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <h2>Our Packages</h2>
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <h3>Basic</h3>
-                <div class="price">From £100</div>
-                <ul>
-                    <li><i class="fas fa-check"></i> Static Website</li>
-                    <li><i class="fas fa-check"></i> Responsive Design</li>
-                    <li><i class="fas fa-check"></i> 5 Pages</li>
-                    <li><i class="fas fa-check"></i> Contact Form</li>
-                    <li><i class="fas fa-check"></i> SEO Basic Setup</li>
-                </ul>
-                <a href="#contact" class="pricing-cta">Get Started</a>
+    <section id="pricing" class="section">
+        <div class="container">
+            <div class="text-center mb-16" style="margin-bottom: 4rem; text-align: center;">
+                <h2 class="headline-lg">Simple Pricing</h2>
             </div>
-            <div class="pricing-card featured">
-                <div class="featured-label">Most Popular</div>
-                <h3>Professional</h3>
-                <div class="price">From £500</div>
-                <ul>
-                    <li><i class="fas fa-check"></i> Dynamic Website</li>
-                    <li><i class="fas fa-check"></i> CMS Integration</li>
-                    <li><i class="fas fa-check"></i> Up to 10 Pages</li>
-                    <li><i class="fas fa-check"></i> Advanced Forms</li>
-                    <li><i class="fas fa-check"></i> Full SEO Setup</li>
-                    <li><i class="fas fa-check"></i> Social Media Integration</li>
-                </ul>
-                <a href="#contact" class="pricing-cta">Get Started</a>
-            </div>
-            <div class="pricing-card">
-                <h3>Enterprise</h3>
-                <div class="price">Custom</div>
-                <ul>
-                    <li><i class="fas fa-check"></i> Full-Stack Application</li>
-                    <li><i class="fas fa-check"></i> Custom Features</li>
-                    <li><i class="fas fa-check"></i> Unlimited Pages</li>
-                    <li><i class="fas fa-check"></i> Database Integration</li>
-                    <li><i class="fas fa-check"></i> Advanced Analytics</li>
-                    <li><i class="fas fa-check"></i> Priority Support</li>
-                </ul>
-                <a href="#contact" class="pricing-cta">Contact Us</a>
+
+            <div class="pricing-grid">
+                <!-- Starter Website -->
+                <div class="pricing-card reveal reveal-delay-1">
+                    <h3>Starter Website</h3>
+                    <div class="price">From £100</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Professional Design</li>
+                        <li><i class="fas fa-check"></i> Works on Mobile</li>
+                        <li><i class="fas fa-check"></i> 5 Pages</li>
+                        <li><i class="fas fa-check"></i> Contact Form</li>
+                        <li><i class="fas fa-check"></i> Google Maps Setup</li>
+                    </ul>
+                    <a href="#contact" class="pricing-cta">Get Started</a>
+                </div>
+
+                <!-- Booking System -->
+                <div class="pricing-card featured reveal reveal-delay-2">
+                    <div class="featured-label">Best for Service Biz</div>
+                    <h3>Booking System</h3>
+                    <div class="price">From £500</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Everything in Starter</li>
+                        <li><i class="fas fa-check"></i> Automated Bookings</li>
+                        <li><i class="fas fa-check"></i> Admin Dashboard</li>
+                        <li><i class="fas fa-check"></i> Email Confirmations</li>
+                        <li><i class="fas fa-check"></i> Staff Login Area</li>
+                    </ul>
+                    <a href="#contact" class="pricing-cta">Get Started</a>
+                </div>
+
+                <!-- Custom App -->
+                <div class="pricing-card reveal reveal-delay-3">
+                    <h3>Custom App</h3>
+                    <div class="price">Custom Quote</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Restaurant Tools</li>
+                        <li><i class="fas fa-check"></i> Staff Management</li>
+                        <li><i class="fas fa-check"></i> Customer Login</li>
+                        <li><i class="fas fa-check"></i> Loyalty Systems</li>
+                        <li><i class="fas fa-check"></i> Advanced Features</li>
+                    </ul>
+                    <a href="#contact" class="pricing-cta">Contact Us</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section id="stats" class="stats">
-        <div class="stats-container">
-            <div class="stat-item">
-                <i class="fas fa-check-circle"></i>
-                <h3>50+</h3>
-                <p>Projects Completed</p>
-            </div>
-            <div class="stat-item">
-                <i class="fas fa-smile"></i>
-                <h3>40+</h3>
-                <p>Happy Clients</p>
-            </div>
-            <div class="stat-item">
-                <i class="fas fa-code-branch"></i>
-                <h3>1000+</h3>
-                <p>Commits Made</p>
-            </div>
-            <div class="stat-item">
-                <i class="fas fa-clock"></i>
-                <h3>99%</h3>
-                <p>On-Time Delivery</p>
-            </div>
-        </div>
-    </section>
+
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <div class="about-content">
-            <p>We are a team of passionate developers dedicated to creating exceptional web experiences. With expertise in React, Node.js, and full-stack development, we transform ideas into powerful digital solutions.</p>
-            
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <h4>Frontend Development</h4>
-                    <ul>
-                        <li><i class="fab fa-react"></i> React.js</li>
-                        <li><i class="fab fa-js"></i> JavaScript</li>
-                        <li><i class="fab fa-html5"></i> HTML5</li>
-                        <li><i class="fab fa-css3-alt"></i> CSS3/SASS</li>
-                    </ul>
+    <section id="about" class="section">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center;">
+                <div>
+                    <h2 class="headline-lg">About The Mason</h2>
+                    <p class="text-secondary" style="margin-bottom: 2rem;">
+                        We are not just developers; we are digital architects. Passionate about creating exceptional web
+                        experiences that merge aesthetics with functionality.
+                    </p>
+                    <div class="grid grid-2">
+                        <div class="card" style="padding: 1.5rem;">
+                            <h4 class="text-primary mb-2">Frontend</h4>
+                            <p class="text-muted text-sm">React, JavaScript, HTML5, CSS3/SASS</p>
+                        </div>
+                        <div class="card" style="padding: 1.5rem;">
+                            <h4 class="text-primary mb-2">Backend</h4>
+                            <p class="text-muted text-sm">Node.js, MongoDB, Express, REST APIs</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="expertise-card">
-                    <h4>Backend Development</h4>
-                    <ul>
-                        <li><i class="fab fa-node-js"></i> Node.js</li>
-                        <li><i class="fas fa-database"></i> MongoDB</li>
-                        <li><i class="fas fa-server"></i> Express.js</li>
-                        <li><i class="fas fa-lock"></i> REST APIs</li>
-                    </ul>
+                <!-- Optional: Add an image here if available, or keep text focused -->
+                <div
+                    style="padding: 2rem; background: radial-gradient(circle, var(--accent-glow), transparent); border-radius: 50%;">
+                    <!-- Decorative element -->
+                    <i class="fas fa-layer-group"
+                        style="font-size: 10rem; color: var(--border-default); display: block; margin: 0 auto; text-align: center;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section" style="background: var(--bg-elevated);">
+        <div class="container">
+            <div class="text-center mb-16" style="margin-bottom: 4rem; text-align: center;">
+                <h2 class="headline-lg">Meet The Visionaries</h2>
+                <p class="text-secondary">Expertise built on years of industry leadership.</p>
+            </div>
+
+            <div class="grid grid-2">
+                <!-- Nayim Ali -->
+                <div class="card team-card reveal reveal-delay-1">
+                    <div class="profile-wrapper">
+                        <img src="img/1742053359213.jpg" alt="Nayim Ali" class="profile-img">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="headline-md">Nayim Ali</h3>
+                        <p class="text-accent role">CEO & Lead Full-Stack Engineer</p>
+                        <p class="text-secondary bio">
+                            Nayim leads the agency’s technical direction and client delivery, combining hands-on
+                            engineering with a strong understanding of business and product strategy. His background
+                            spans full-stack development, cloud-based architectures on AWS, and solution design across
+                            both startup and enterprise environments.
+                            <br><br>
+                            He has delivered projects through roles at <strong>Accenture</strong>, <strong>Retail
+                                Reply</strong>, <strong>Globality</strong>, and <strong>Queen Mary University of
+                                London</strong>, bringing a pragmatic, outcome-focused approach to building scalable and
+                            reliable digital products.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Uzair Ishaq -->
+                <div class="card team-card reveal reveal-delay-2">
+                    <div class="profile-wrapper">
+                        <img src="img/1758074257200.jpg" alt="Uzair Ishaq" class="profile-img">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="headline-md">Uzair Ishaq</h3>
+                        <p class="text-accent role">Co-Founder & Senior Full-Stack Engineer</p>
+                        <p class="text-secondary bio">
+                            Uzair is a senior full-stack engineer with deep experience in system design, cloud
+                            infrastructure, and production-ready application development. He has worked extensively with
+                            AWS, building scalable systems and contributing to platforms used at enterprise scale.
+                            <br><br>
+                            Alongside his core engineering work, Uzair has experience designing and integrating
+                            AI-driven systems and agents. His background includes work with <strong>Royal Bank of
+                                Canada</strong>, <strong>Ki Insurance</strong>, <strong>Saqera</strong>, and
+                            <strong>Luca</strong>.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get In Touch</h2>
-        <div class="contact-container">
-            <form class="contact-form" action="https://formsubmit.co/TheWebDevMason@outlook.com" method="POST">
-                <input type="hidden" name="_next" value="https://the-web-dev-mason.github.io/Web-Dev-Mason/thanks.html">
-                <input type="hidden" name="_captcha" value="true">
-                <input type="hidden" name="_subject" value="New Contact Form Submission - Web-Dev Mason">
-                <input type="text" name="_honey" style="display: none">
-                <input type="hidden" name="_template" value="table">
-                
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <select name="service" required>
-                        <option value="">Select Service</option>
-                        <option value="basic">Basic Package</option>
-                        <option value="professional">Professional Package</option>
-                        <option value="enterprise">Enterprise Package</option>
-                        <option value="custom">Custom Project</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="Project Details" required></textarea>
-                </div>
-                <button type="submit" class="submit-button">Send Message</button>
-            </form>
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="text-center mb-16" style="margin-bottom: 4rem; text-align: center;">
+                <h2 class="headline-lg">Let's Build Something Great</h2>
+                <p class="text-secondary">Ready to start your project?</p>
+            </div>
+
+            <div class="contact-container">
+                <form class="contact-form" action="https://formsubmit.co/TheWebDevMason@outlook.com" method="POST">
+                    <input type="hidden" name="_next"
+                        value="https://the-web-dev-mason.github.io/Web-Dev-Mason/thanks.html">
+                    <input type="hidden" name="_captcha" value="true">
+
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="service" required>
+                            <option value="">Select Service / Package</option>
+                            <option value="basic">Basic Package</option>
+                            <option value="professional">Professional Package</option>
+                            <option value="enterprise">Enterprise Package</option>
+                            <option value="custom">Custom Project</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-info">
+            <!-- Col 1: Brand -->
+            <div class="footer-brand">
                 <h3>The Web-Dev Mason</h3>
-                <p>Building the future of web technology</p>
+                <p class="text-muted">Helping local businesses grow with better technology.</p>
             </div>
-            <div class="footer-links">
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#services">Web Development</a></li>
-                        <li><a href="#services">API Development</a></li>
-                        <li><a href="#services">UI/UX Design</a></li>
-                        <li><a href="#services">Maintenance</a></li>
-                    </ul>
-                </div>
+
+            <!-- Col 2: Links -->
+            <div class="footer-col">
+                <h4 class="text-primary">Links</h4>
+                <ul>
+                    <li><a href="#solutions" class="text-secondary hover:text-white">Solutions</a></li>
+                    <li><a href="#work" class="text-secondary hover:text-white">Our Work</a></li>
+                    <li><a href="#contact" class="text-secondary hover:text-white">Contact</a></li>
+                </ul>
             </div>
-            <div class="social-links">
-                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+
+            <!-- Col 3: Contact -->
+            <div class="footer-col">
+                <h4 class="text-primary">Contact</h4>
+                <ul>
+                    <li><a href="mailto:TheWebDevMason@outlook.com" class="text-secondary hover:text-white">Email Us</a>
+                    </li>
+                    <li><a href="tel:07523948426" class="text-secondary hover:text-white">07523 948 426</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Socials -->
+            <div class="footer-col">
+                <div class="social-links">
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 The Web-Dev Mason. All rights reserved.</p>
-            </div>
         </div>
     </footer>
 
-    <!-- Floating Phone Button -->
+    <!-- Floating Phone -->
     <a href="tel:07523948426" class="floating-phone">
         <i class="fas fa-phone"></i>
     </a>
 
+    <!-- Scripts -->
     <script src="scripts/script.js"></script>
 </body>
+
 </html>
