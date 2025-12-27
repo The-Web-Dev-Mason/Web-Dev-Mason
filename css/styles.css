@@ -748,6 +748,43 @@ footer {
     color: var(--accent-light);
 }
 
+/* =========================================
+   Video Component
+   ========================================= */
+/* Decorative element replaced by video */
+/*
+<i class="fas fa-layer-group"
+    style="font-size: 10rem; color: var(--border-default); display: block; margin: 0 auto; text-align: center;"></i>
+*/
+.video-wrapper {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-elevated);
+}
+
+/* Glow effect behind video */
+.video-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: radial-gradient(circle, var(--accent-glow), transparent 70%);
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-xl);
+}
+
 .footer-bottom {
     border-top: 1px solid var(--border-subtle);
     text-align: center;

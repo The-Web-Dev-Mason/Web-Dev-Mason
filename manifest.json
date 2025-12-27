@@ -1,0 +1,21 @@
+{
+  "name": "Web-Dev Mason",
+  "short_name": "Web-Dev Mason",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007C89",
+  "description": "We build websites that get you customers. Automated booking systems and digital tools.",
+  "icons": [
+    {
+      "src": "img/The_Web-dev_Mason-removebg-preview.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/The_Web-dev_Mason-removebg-preview.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

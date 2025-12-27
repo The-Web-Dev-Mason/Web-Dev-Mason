@@ -9,6 +9,8 @@
         content="We build websites that get you customers. From automated booking systems for barbers to restaurant digital tools and modern websites. Local UK developer.">
     <meta name="keywords"
         content="web design, booking systems, restaurant tools, digital agency, UK web developer, barber website, garage website">
+    <link rel="canonical" href="https://the-web-dev-mason.github.io/Web-Dev-Mason/">
+    <meta name="theme-color" content="#007C89">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="business.business">
@@ -32,34 +34,69 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "The Web-Dev Mason",
-      "image": "https://the-web-dev-mason.github.io/Web-Dev-Mason/img/The_Web-dev_Mason-removebg-preview.png",
-      "description": "Helping local businesses grow with better technology. Specialized in automated booking systems and digital restaurant tools.",
-      "url": "https://the-web-dev-mason.github.io/Web-Dev-Mason/",
-      "telephone": "07523948426",
-      "email": "TheWebDevMason@outlook.com",
-      "priceRange": "£100 - £500+",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "UK"
-      },
-      "founder": [
+      "@graph": [
         {
-          "@type": "Person",
-          "name": "Nayim Ali",
-          "jobTitle": "CEO & Lead Full-Stack Engineer"
+          "@type": "ProfessionalService",
+          "@id": "https://the-web-dev-mason.github.io/Web-Dev-Mason/#organization",
+          "name": "The Web-Dev Mason",
+          "image": "https://the-web-dev-mason.github.io/Web-Dev-Mason/img/The_Web-dev_Mason-removebg-preview.png",
+          "description": "Helping local businesses grow with better technology. Specialized in automated booking systems and digital restaurant tools.",
+          "url": "https://the-web-dev-mason.github.io/Web-Dev-Mason/",
+          "telephone": "07523948426",
+          "email": "TheWebDevMason@outlook.com",
+          "priceRange": "£100 - £500+",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "UK"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "United Kingdom"
+          },
+          "sameAs": [
+            "https://github.com/the-web-dev-mason"
+          ],
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Nayim Ali",
+              "jobTitle": "CEO & Lead Full-Stack Engineer"
+            },
+            {
+              "@type": "Person",
+              "name": "Uzair Ishaq",
+              "jobTitle": "Co-Founder & Senior Full-Stack Engineer"
+            }
+          ]
         },
         {
-          "@type": "Person",
-          "name": "Uzair Ishaq",
-          "jobTitle": "Co-Founder & Senior Full-Stack Engineer"
+          "@type": "WebSite",
+          "@id": "https://the-web-dev-mason.github.io/Web-Dev-Mason/#website",
+          "url": "https://the-web-dev-mason.github.io/Web-Dev-Mason/",
+          "name": "Web-Dev Mason",
+          "description": "Websites That Get You Customers",
+          "publisher": {
+            "@id": "https://the-web-dev-mason.github.io/Web-Dev-Mason/#organization"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://the-web-dev-mason.github.io/Web-Dev-Mason/"
+            }
+          ]
         }
       ]
     }
     </script>
 
     <link rel="icon" type="image/x-icon" href="img/The_Web-dev_Mason-removebg-preview.png">
+    <link rel="apple-touch-icon" href="img/The_Web-dev_Mason-removebg-preview.png">
+    <link rel="manifest" href="manifest.json">
 
     <!-- Preconnect for Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -176,7 +213,8 @@
             <div class="portfolio-grid">
                 <a href="https://the-web-dev-mason.github.io/TEST/" class="portfolio-item reveal reveal-delay-1"
                     target="_blank">
-                    <img src="img/the-web-dev-mason.github.io_TEST_.png" alt="Barber Website">
+                    <img src="img/the-web-dev-mason.github.io_TEST_.png"
+                        alt="Barber Shop Website with Automated Booking System" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Barber Website</h3>
                         <p class="text-muted">Automated Booking System</p>
@@ -186,8 +224,8 @@
 
                 <a href="https://the-web-dev-mason.github.io/Laundry-Dev-main/"
                     class="portfolio-item reveal reveal-delay-2" target="_blank">
-                    <img src="img/the-web-dev-mason.github.io_Laundry.png"
-                        alt="Laundry Website">
+                    <img src="img/the-web-dev-mason.github.io_Laundry.png" alt="Laundry Service Digital Catalog Website"
+                        loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Laundry Website</h3>
                         <p class="text-muted">Digital Catalog</p>
@@ -197,7 +235,8 @@
 
                 <a href="https://the-web-dev-mason.github.io/Garage-Service/"
                     class="portfolio-item reveal reveal-delay-3" target="_blank">
-                    <img src="img/the-web-dev-mason.github.io_CST_.png" alt="Car Service Website">
+                    <img src="img/the-web-dev-mason.github.io_CST_.png" alt="Car Service and Garage Application Website"
+                        loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Car Service Website</h3>
                         <p class="text-muted">Service Appointment Tool</p>
@@ -315,11 +354,11 @@
                     </div>
                 </div>
                 <!-- Optional: Add an image here if available, or keep text focused -->
-                <div
-                    style="padding: 2rem; background: radial-gradient(circle, var(--accent-glow), transparent); border-radius: 50%;">
-                    <!-- Decorative element -->
-                    <i class="fas fa-layer-group"
-                        style="font-size: 10rem; color: var(--border-default); display: block; margin: 0 auto; text-align: center;"></i>
+                <div class="video-wrapper reveal reveal-delay-2">
+                    <video controls playsinline>
+                        <source src="media/Logo_Revision_For_Web_Development.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
@@ -337,7 +376,8 @@
                 <!-- Nayim Ali -->
                 <div class="card team-card reveal reveal-delay-1">
                     <div class="profile-wrapper">
-                        <img src="img/1742053359213.jpg" alt="Nayim Ali" class="profile-img">
+                        <img src="img/1742053359213.jpg" alt="Nayim Ali - CEO of The Web-Dev Mason" class="profile-img"
+                            loading="lazy">
                     </div>
                     <div class="team-content">
                         <h3 class="headline-md">Nayim Ali</h3>
@@ -359,7 +399,8 @@
                 <!-- Uzair Ishaq -->
                 <div class="card team-card reveal reveal-delay-2">
                     <div class="profile-wrapper">
-                        <img src="img/1758074257200.jpg" alt="Uzair Ishaq" class="profile-img">
+                        <img src="img/1758074257200.jpg" alt="Uzair Ishaq - Co-Founder of The Web-Dev Mason"
+                            class="profile-img" loading="lazy">
                     </div>
                     <div class="team-content">
                         <h3 class="headline-md">Uzair Ishaq</h3>
