@@ -33,6 +33,15 @@ a {
     transition: var(--transition-fast);
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--accent-light);
+    outline-offset: 3px;
+}
+
 ul {
     list-style: none;
 }
@@ -280,6 +289,9 @@ nav {
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
+    padding: 0.75rem;
+    border: 0;
+    background: transparent;
 }
 
 .burger-line {
@@ -354,7 +366,7 @@ nav {
    ========================================= */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--space-lg);
 }
 
@@ -410,7 +422,7 @@ nav {
    ========================================= */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--space-lg);
 }
 
@@ -473,7 +485,7 @@ nav {
 
 .pricing-card {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
     max-width: 400px;
     background: var(--bg-elevated);
     border: 1px solid var(--border-subtle);
@@ -575,6 +587,28 @@ nav {
     margin-bottom: 1.5rem;
 }
 
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: var(--weight-medium);
+}
+
+.field-optional {
+    color: var(--text-muted);
+    font-weight: var(--weight-regular);
+}
+
+.form-honeypot {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -619,6 +653,26 @@ nav {
 .submit-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 124, 137, 0.4);
+}
+
+.section-intro {
+    max-width: 680px;
+    margin: 0.75rem auto 0;
+    text-align: center;
+}
+
+.form-note {
+    margin-top: 1rem;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.form-note a,
+.footer-bottom a {
+    color: var(--text-accent);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
 }
 
 /* =========================================
@@ -793,6 +847,43 @@ footer {
     font-size: 0.9rem;
 }
 
+.thank-you-page,
+.privacy-page {
+    width: min(760px, calc(100% - 2rem));
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 8rem 0 4rem;
+}
+
+.thank-you-page {
+    text-align: center;
+}
+
+.thank-you-page p,
+.privacy-page p,
+.privacy-page li {
+    color: var(--text-secondary);
+}
+
+.thank-you-page .cta-button {
+    display: inline-flex;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    background: var(--accent-primary);
+    color: #fff;
+    font-weight: var(--weight-medium);
+}
+
+.privacy-page h2 {
+    margin-top: 2rem;
+}
+
+.privacy-page ul {
+    margin: 0 0 1rem 1.25rem;
+    list-style: disc;
+}
+
 /* =========================================
    Floating Utilities
    ========================================= */
@@ -857,6 +948,10 @@ footer {
         transform: none;
     }
 
+    .contact-form {
+        padding: 2rem 1.25rem;
+    }
+
     .footer-content {
         grid-template-columns: 1fr;
         /* Stack footer on mobile */
@@ -917,4 +1012,25 @@ footer {
 
 .reveal-delay-4 {
     transition-delay: 0.4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal,
+    .fade-out {
+        opacity: 1;
+        transform: none;
+    }
 }
