@@ -8,9 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Toggle navigation
         nav.classList.toggle('active');
         burger.classList.toggle('active');
-        const isOpen = nav.classList.contains('active');
-        burger.setAttribute('aria-expanded', String(isOpen));
-        burger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
 
         // Animate links
         navLinks.forEach((link, index) => {
@@ -27,8 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!nav.contains(e.target) && !burger.contains(e.target) && nav.classList.contains('active')) {
             nav.classList.remove('active');
             burger.classList.remove('active');
-            burger.setAttribute('aria-expanded', 'false');
-            burger.setAttribute('aria-label', 'Open navigation menu');
         }
     });
 
@@ -37,8 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             nav.classList.remove('active');
             burger.classList.remove('active');
-            burger.setAttribute('aria-expanded', 'false');
-            burger.setAttribute('aria-label', 'Open navigation menu');
         });
     });
 
@@ -117,9 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 errorMessage += 'Please enter a valid email address.\n';
             }
 
-            if (message.length > 0 && message.length < 10) {
+            if (message.length < 10) {
                 isValid = false;
-                errorMessage += 'If you add a message, please use at least 10 characters.\n';
+                errorMessage += 'Message must be at least 10 characters long.\n';
             }
 
             if (!isValid) {
@@ -160,8 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (!floatingPhone) return;
-
         if (scrollTop > lastScrollTop && scrollTop > 500) {
             // Scrolling down & past 500px - hide button
             floatingPhone.style.transform = 'translateY(100px)';
@@ -172,11 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         lastScrollTop = scrollTop;
     });
-
-    const currentYear = document.querySelector('#current-year');
-    if (currentYear) {
-        currentYear.textContent = new Date().getFullYear();
-    }
 
     // Add CSS animation class
     const style = document.createElement('style');
