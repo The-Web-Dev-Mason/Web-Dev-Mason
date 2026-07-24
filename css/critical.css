@@ -1,0 +1,13 @@
+/* critical.css – above‑the‑fold styles */
+@import url('variables.css');
+/* Reset & basic layout */
+*, *::before, *::after {margin:0;padding:0;box-sizing:border-box;}
+html {scroll-behavior:smooth;font-size:16px;}
+body {font-family:var(--font-body);background-color:var(--bg-base);color:var(--text-primary);overflow-x:hidden;}
+/* Mobile navigation */
+@media (max-width: 768px) {
+  .burger-menu {display:flex;flex-direction:column;gap:5px;cursor:pointer;}
+  .nav-links {position:fixed;top:0;right:-100%;width:250px;height:100vh;background:rgba(10,10,15,0.9);flex-direction:column;padding-top:5rem;transition:right 0.3s ease;}
+  .nav-links.active {right:0;}
+  .nav-links a {padding:1rem 2rem;display:block;}
+}
