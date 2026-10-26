@@ -20,7 +20,7 @@
   /* Text - High contrast hierarchy */
   --text-primary: #f8f8fc;      /* Headlines, primary actions */
   --text-secondary: #a0a0b0;    /* Body text, descriptions */
-  --text-muted: #5a5a6e;        /* Metadata, labels, placeholders */
+  --text-muted: #9090a5;        /* Metadata, labels, placeholders */
   --text-accent: #00a4b4;       /* Text links, highlights */
   --text-inverse: #0a0a0f;      /* Text on accent backgrounds */
 
