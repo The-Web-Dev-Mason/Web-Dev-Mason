@@ -4,8 +4,8 @@
      ========================================= */
   
   /* Backgrounds - Deep, layered & atmospheric */
-  --bg-base: #0a0a0f;           /* Main page background */
-  --bg-elevated: #12121a;       /* Cards, sections, panels */
+  --bg-base: #0e181a;           /* Main page background */
+  --bg-elevated: #142326;       /* Cards, sections, panels */
   --bg-surface: #1a1a24;        /* Interactive surfaces (inputs, active items) */
   --bg-hover: #22222e;          /* Hover states */
   --bg-glass: rgba(18, 18, 26, 0.8); /* Glassmorphism background */
@@ -19,10 +19,10 @@
   
   /* Text - High contrast hierarchy */
   --text-primary: #f8f8fc;      /* Headlines, primary actions */
-  --text-secondary: #a0a0b0;    /* Body text, descriptions */
-  --text-muted: #9090a5;        /* Metadata, labels, placeholders */
+  --text-secondary: #b7c6c7;    /* Body text, descriptions */
+  --text-muted: #a5b7b8;        /* Metadata, labels, placeholders */
   --text-accent: #00a4b4;       /* Text links, highlights */
-  --text-inverse: #0a0a0f;      /* Text on accent backgrounds */
+  --text-inverse: #0e181a;      /* Text on accent backgrounds */
 
   /* Borders - Subtle definition */
   --border-subtle: rgba(255, 255, 255, 0.06);

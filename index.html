@@ -119,16 +119,11 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK5VM67N"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <!-- Ambient Background -->
-    <div class="fixed inset-0 z-[-1] pointer-events-none">
-        <div
-            style="position: fixed; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at center, rgba(0, 124, 137, 0.03) 0%, transparent 50%);">
-        </div>
-    </div>
-
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <!-- Navigation -->
-    <nav class="glass">
+    <nav class="glass" aria-label="Main navigation">
         <div class="nav-container">
+            <a class="brand" href="#home">Web-Dev <span>Mason</span><span class="sr-only"> home</span></a>
 
 
             <button class="burger-menu" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false">
@@ -138,72 +133,29 @@
             </button>
 
             <ul class="nav-links" id="primary-navigation">
-                <li><a href="#home">Home</a></li>
+
                 <li><a href="#solutions">Solutions</a></li>
                 <li><a href="#work">Our Work</a></li>
-                <li><a href="#process">Process</a></li>
+
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact" class="text-accent">Contact</a></li>
+                <li><a href="#contact" class="nav-review">Free website review</a></li>
             </ul>
         </div>
     </nav>
 
+    <main id="main-content">
     <!-- Hero Section -->
     <section id="home" class="hero section">
         <div class="hero-content">
-            <img src="img/The_Web-dev_Mason-removebg-preview.png" alt="Web-Dev Mason Logo" class="hero-logo">
-            <h1 class="headline-xl reveal reveal-delay-1">Turn More Enquiries Into Booked Jobs</h1>
-            <p class="body-lg reveal reveal-delay-2">We build fast websites and straightforward booking journeys for UK service businesses—so customers can act while you get on with the work.</p>
-            <div class="hero-cta reveal reveal-delay-3">
+            <p class="eyebrow">Websites for UK service businesses</p>
+            <h1 class="headline-xl">Make it easy for customers to choose you.</h1>
+            <p class="body-lg">A clear, professional website that shows what you do and makes it simple to enquire or book. Built around your business, with a developer you can speak to directly.</p>
+            <div class="hero-cta">
                 <a href="#contact" class="btn btn-primary">
                     Request a Free Website Review <i class="fas fa-arrow-right"></i>
                 </a>
-                <a href="#work" class="btn btn-secondary">See Real Examples</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solutions Section -->
-    <section id="solutions" class="section">
-        <div class="container">
-            <div class="text-center mb-16" style="margin-bottom: 4rem; text-align: center;">
-                <h2 class="headline-lg">Built Around How Your Business Wins Work</h2>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card reveal reveal-delay-1">
-                    <i class="fas fa-calendar-check"></i>
-                    <h3>Booking Journeys</h3>
-                    <p class="text-secondary">Make it easy for customers to choose a service, select a time and send a clear enquiry—without endless back-and-forth.</p>
-                    <ul class="service-features">
-                        <li>Ideal for appointments and call-outs</li>
-                        <li>Clear confirmation emails</li>
-                        <li>Built around your real workflow</li>
-                    </ul>
-                </div>
-
-                <div class="service-card reveal reveal-delay-2">
-                    <i class="fas fa-utensils"></i>
-                    <h3>Websites That Convert</h3>
-                    <p class="text-secondary">Give potential customers a confident first impression and a direct route to call, enquire or book.</p>
-                    <ul class="service-features">
-                        <li>Clear services and pricing</li>
-                        <li>Click-to-call and enquiry actions</li>
-                        <li>Designed mobile-first</li>
-                    </ul>
-                </div>
-
-                <div class="service-card reveal reveal-delay-3">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Custom Business Tools</h3>
-                    <p class="text-secondary">When your team needs more than a brochure site, we design focused tools that make everyday tasks simpler.</p>
-                    <ul class="service-features">
-                        <li>Restaurant and staff workflows</li>
-                        <li>Customer and admin areas</li>
-                        <li>Practical integrations</li>
-                    </ul>
-                </div>
+                <a href="#work" class="btn btn-secondary">See Island Barbers</a>
             </div>
         </div>
     </section>
@@ -211,13 +163,13 @@
     <!-- Work Section -->
     <section id="work" class="section">
         <div class="container">
-            <div class="text-center mb-16" style="margin-bottom: 4rem; text-align: center;">
-                <h2 class="headline-lg">Selected Work</h2>
-                <p class="text-secondary section-intro">A mix of live client sites and in-house prototypes. We are always clear about what we built and what the project was designed to solve.</p>
+            <div class="section-heading">
+                <h2 class="headline-lg">A website out in the real world</h2>
+                <p class="text-secondary section-intro">Explore the website built for Island Barbers, an East London business with four locations.</p>
             </div>
 
             <!-- Featured Live Client: Island Barbers -->
-            <div class="case-study-card reveal reveal-delay-1">
+            <div class="case-study-card">
                 <div class="case-study-image-wrap">
                     <img src="img/island_barbers_mockup.png" alt="Island Barbers Website — Premium Barbershop in East London" loading="lazy" class="case-study-img">
                     <div class="case-study-live-badge">
@@ -272,64 +224,49 @@
                 </div>
             </div>
 
-            <!-- Prototypes -->
-            <div class="prototypes-label reveal reveal-delay-2">
-                <span>In-House Prototypes</span>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="section">
+        <div class="container">
+            <div class="section-heading">
+                <h2 class="headline-lg">What your website can do for you</h2>
             </div>
 
-            <div class="portfolio-grid">
-                <a href="https://the-web-dev-mason.github.io/Laundry-Dev-main/"
-                    class="portfolio-item reveal reveal-delay-2" target="_blank" rel="noopener noreferrer">
-                    <img src="img/the-web-dev-mason.github.io_Laundry.png" alt="Laundry Service Digital Catalog Website"
-                        loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Laundry Service Website</h3>
-                        <p class="text-muted">Digital catalogue and enquiry flow</p>
-                        <span class="view-project">View Project <i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                </a>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Booking Journeys</h3>
+                    <p class="text-secondary">Make it easy for customers to choose a service, select a time and send a clear enquiry—without endless back-and-forth.</p>
+                    <ul class="service-features">
+                        <li>Ideal for appointments and call-outs</li>
+                        <li>Clear confirmation emails</li>
+                        <li>Built around your real workflow</li>
+                    </ul>
+                </div>
 
-                <a href="https://the-web-dev-mason.github.io/Mechanic-Website/"
-                    class="portfolio-item reveal reveal-delay-3" target="_blank" rel="noopener noreferrer">
-                    <img src="img/the-web-dev-mason.github.io_CST_.png" alt="Car Service and Garage Application Website"
-                        loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Car Service Website</h3>
-                        <p class="text-muted">Service and appointment concept</p>
-                        <span class="view-project">View Project <i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                </a>
+                <div class="service-card">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Websites That Convert</h3>
+                    <p class="text-secondary">Give potential customers a confident first impression and a direct route to call, enquire or book.</p>
+                    <ul class="service-features">
+                        <li>Clear services and pricing</li>
+                        <li>Click-to-call and enquiry actions</li>
+                        <li>Designed mobile-first</li>
+                    </ul>
+                </div>
 
-                <a href="https://dentist-poc-template.netlify.app/"
-                    class="portfolio-item reveal reveal-delay-4" target="_blank" rel="noopener noreferrer">
-                    <img src="img/the-web-dev-mason.github.io_Dentist_.png" alt="Dental Practice Booking Website Prototype"
-                        loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Dental Practice Website</h3>
-                        <p class="text-muted">Booking journey concept</p>
-                        <span class="view-project">View Project <i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                </a>
-
-                <a href="https://electrician-demo-dev.netlify.app/" class="portfolio-item reveal reveal-delay-5" target="_blank" rel="noopener noreferrer">
-                    <img src="img/Electrician Website.png" alt="Electrician Website Prototype"
-                        loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Electrician Website</h3>
-                        <p class="text-muted">Local trade services concept</p>
-                        <span class="view-project">View Project <i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                </a>
-
-                <a href="https://demo-salon-dev.netlify.app/" class="portfolio-item reveal reveal-delay-6" target="_blank" rel="noopener noreferrer">
-                    <img src="img/Salon.png" alt="Hair and Beauty Salon Website Prototype"
-                        loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Hair &amp; Beauty Salon Website</h3>
-                        <p class="text-muted">Booking and brand concept</p>
-                        <span class="view-project">View Project <i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                </a>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Custom Business Tools</h3>
+                    <p class="text-secondary">When your team needs more than a brochure site, we design focused tools that make everyday tasks simpler.</p>
+                    <ul class="service-features">
+                        <li>Restaurant and staff workflows</li>
+                        <li>Customer and admin areas</li>
+                        <li>Practical integrations</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -337,25 +274,25 @@
     <!-- Process Section -->
     <section id="process" class="section" style="background: var(--bg-elevated);">
         <div class="container">
-            <div class="text-center mb-16" style="margin-bottom: 4rem; text-align: center;">
-                <h2 class="headline-lg">Simple 4-Step Process</h2>
+            <div class="section-heading">
+                <h2 class="headline-lg">A straightforward path to launch</h2>
             </div>
 
             <div class="grid grid-2"> <!-- using grid utility -->
-                <div class="card reveal reveal-delay-1">
+                <div class="card">
                     <h3 class="text-accent">1. We Chat</h3>
-                    <p class="text-secondary">We discuss the bottleneck in your customer journey—not the code—to find the right solution.
+                    <p class="text-secondary">Tell us about your business, your customers and what you need your website to do.
                     </p>
                 </div>
-                <div class="card reveal reveal-delay-2">
+                <div class="card">
                     <h3 class="text-accent">2. We Plan</h3>
                     <p class="text-secondary">We design a look that fits your brand and map out the features.</p>
                 </div>
-                <div class="card reveal reveal-delay-3">
+                <div class="card">
                     <h3 class="text-accent">3. We Build</h3>
                     <p class="text-secondary">We build, test and refine your site so it works on the devices your customers actually use.</p>
                 </div>
-                <div class="card reveal reveal-delay-4">
+                <div class="card">
                     <h3 class="text-accent">4. You Launch</h3>
                     <p class="text-secondary">We put it online, check the essentials and show you how to use it. No stress.</p>
                 </div>
@@ -366,15 +303,16 @@
     <!-- Pricing Section -->
     <section id="pricing" class="section">
         <div class="container">
-            <div class="text-center mb-16" style="margin-bottom: 4rem; text-align: center;">
-                <h2 class="headline-lg">Simple Pricing</h2>
+            <div class="section-heading">
+                <h2 class="headline-lg">Clear starting prices</h2>
+                <p>We agree the scope and price before work begins. Start with a free review if you’re unsure what you need.</p>
             </div>
 
             <div class="pricing-grid">
                 <!-- Starter Website -->
-                <div class="pricing-card reveal reveal-delay-1">
+                <div class="pricing-card">
                     <h3>Starter Presence</h3>
-                    <div class="price">From £1000</div>
+                    <div class="price">From £1,000</div>
                     <ul>
                         <li><i class="fas fa-check"></i> Professional Design</li>
                         <li><i class="fas fa-check"></i> Works on Mobile</li>
@@ -386,10 +324,10 @@
                 </div>
 
                 <!-- Booking System -->
-                <div class="pricing-card featured reveal reveal-delay-2">
-                    <div class="featured-label">Recommended</div>
+                <div class="pricing-card featured">
+
                     <h3>Booking Conversion Site</h3>
-                    <div class="price">From £2000</div>
+                    <div class="price">From £2,000</div>
                     <ul>
                         <li><i class="fas fa-check"></i> Everything in Starter</li>
                         <li><i class="fas fa-check"></i> Booking or enquiry flow</li>
@@ -401,9 +339,9 @@
                 </div>
 
                 <!-- Custom App -->
-                <div class="pricing-card reveal reveal-delay-3">
+                <div class="pricing-card">
                     <h3>Custom App</h3>
-                    <div class="price">Custom Quote</div>
+                    <div class="price">Quoted to your brief</div>
                     <ul>
                         <li><i class="fas fa-check"></i> A scoped discovery session</li>
                         <li><i class="fas fa-check"></i> Purpose-built workflow</li>
@@ -419,48 +357,17 @@
 
 
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="grid grid-2" style="align-items: center;">
-                <div>
-                    <h2 class="headline-lg">About The Mason</h2>
-                    <p class="text-secondary" style="margin-bottom: 2rem;">
-                        We are two UK-based engineers who build practical digital products for real businesses. You work directly with the people designing and building the solution—without agency layers or jargon.
-                    </p>
-                    <div class="grid grid-2">
-                        <div class="card" style="padding: 1.5rem;">
-                            <h3 class="text-primary mb-2">Frontend</h3>
-                            <p class="text-muted text-sm">React, JavaScript, HTML5, CSS3/SASS</p>
-                        </div>
-                        <div class="card" style="padding: 1.5rem;">
-                            <h3 class="text-primary mb-2">Backend</h3>
-                            <p class="text-muted text-sm">Node.js, MongoDB, Express, REST APIs</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Optional: Add an image here if available, or keep text focused -->
-                <div class="video-wrapper reveal reveal-delay-2">
-                    <video controls playsinline width="1280" height="720" preload="none" poster="img/The_Web-dev_Mason-removebg-preview.png" aria-label="Web-Dev Mason introduction">
-                        <source src="media/Cartoon_Video_Generation_Complete.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Team Section -->
-    <section id="team" class="section" style="background: var(--bg-elevated);">
+    <section id="about" class="section" style="background: var(--bg-elevated);">
         <div class="container">
-            <div class="text-center mb-16" style="margin-bottom: 4rem; text-align: center;">
-                <h2 class="headline-lg">Meet The Visionaries</h2>
-                <p class="text-secondary">Senior engineering experience, applied with a practical small-business mindset.</p>
+            <div class="section-heading">
+                <h2 class="headline-lg">Meet your developer</h2>
+                <p class="text-secondary">Talk directly with Nayim about your website, from the first conversation to launch.</p>
             </div>
 
             <div class="grid grid-2">
                 <!-- Nayim Ali -->
-                <div class="card team-card reveal reveal-delay-1">
+                <div class="card team-card">
                     <div class="profile-wrapper">
                         <img src="img/1742053359213.jpg" alt="Nayim Ali - CEO of The Web-Dev Mason" class="profile-img"
                             loading="lazy">
@@ -488,9 +395,9 @@
     <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
-            <div class="text-center mb-16" style="margin-bottom: 4rem; text-align: center;">
+            <div class="section-heading">
                 <h2 class="headline-lg">Get a Free Website & Booking Review</h2>
-                <p class="text-secondary">Tell us the outcome you want. We will reply with a clear, practical next step.</p>
+                <p class="text-secondary">Share your website or tell us what you have in mind. We’ll reply with practical suggestions and a clear next step. No obligation to book a project.</p>
             </div>
 
             <div class="contact-container">
@@ -531,6 +438,7 @@
         </div>
     </section>
 
+    </main>
     <!-- Footer -->
     <footer>
         <div class="footer-content">
