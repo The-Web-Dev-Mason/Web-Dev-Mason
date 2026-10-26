@@ -4,10 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
 
+    function setMenuOpen(isOpen) {
+        nav.classList.toggle('active', isOpen);
+        burger.classList.toggle('active', isOpen);
+        burger.setAttribute('aria-expanded', String(isOpen));
+        burger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    }
+
     burger.addEventListener('click', () => {
         // Toggle navigation
-        nav.classList.toggle('active');
-        burger.classList.toggle('active');
+        setMenuOpen(!nav.classList.contains('active'));
 
         // Animate links
         navLinks.forEach((link, index) => {
@@ -22,17 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!nav.contains(e.target) && !burger.contains(e.target) && nav.classList.contains('active')) {
-            nav.classList.remove('active');
-            burger.classList.remove('active');
+            setMenuOpen(false);
         }
     });
 
     // Close menu when clicking a link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            nav.classList.remove('active');
-            burger.classList.remove('active');
+            setMenuOpen(false);
         });
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.classList.contains('active')) {
+            setMenuOpen(false);
+            burger.focus();
+        }
     });
 
     // Smooth scroll for anchor links
@@ -47,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 window.scrollTo({
                     top: offsetPosition,
-                    behavior: 'smooth'
+                    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
                 });
             }
         });
@@ -86,41 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // Form validation and handling
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            // Form is already being handled by FormSubmit
-            // Add any additional validation here if needed
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
-
-            let isValid = true;
-            let errorMessage = '';
-
-            if (name.length < 2) {
-                isValid = false;
-                errorMessage += 'Name must be at least 2 characters long.\n';
-            }
-
-            if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-                isValid = false;
-                errorMessage += 'Please enter a valid email address.\n';
-            }
-
-            if (message.length < 10) {
-                isValid = false;
-                errorMessage += 'Message must be at least 10 characters long.\n';
-            }
-
-            if (!isValid) {
-                e.preventDefault();
-                alert(errorMessage);
-            }
-        });
-    }
+    // Required fields and email format use native HTML validation.
+    // The website/Instagram and message fields are intentionally optional.
 
     // Add active state to navigation based on scroll position
     function updateActiveNavLink() {

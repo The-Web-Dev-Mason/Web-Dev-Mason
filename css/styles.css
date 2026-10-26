@@ -692,7 +692,8 @@ nav {
     text-align: center;
 }
 
-.portfolio-item:hover .portfolio-overlay {
+.portfolio-item:hover .portfolio-overlay,
+.portfolio-item:focus-visible .portfolio-overlay {
     opacity: 1;
 }
 
@@ -1086,6 +1087,12 @@ footer {
    Responsive
    ========================================= */
 @media (max-width: 768px) {
+    .services-grid,
+    .portfolio-grid,
+    .pricing-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
     .headline-xl {
         font-size: 2.5rem;
     }
@@ -1133,6 +1140,48 @@ footer {
 
     .social-links {
         justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .grid-2 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-cta {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+@media (hover: none) {
+    .portfolio-overlay {
+        opacity: 1;
+        justify-content: flex-end;
+        background: linear-gradient(transparent, rgba(10, 10, 15, 0.95));
+        backdrop-filter: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        transition-delay: 0ms !important;
     }
 }
 
