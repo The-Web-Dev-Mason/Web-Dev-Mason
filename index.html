@@ -172,10 +172,16 @@
             <!-- Featured Live Client: Island Barbers -->
             <div class="case-study-card">
                 <div class="case-study-image-wrap">
-                    <img src="img/island_barbers_mockup.png" alt="Island Barbers Website — Premium Barbershop in East London" loading="lazy" class="case-study-img">
-                    <div class="case-study-live-badge">
-                        <span class="live-dot"></span> Live Client
+                    <div class="preview-heading"><span class="live-dot"></span> Live client <span>islandbarbers.com</span></div>
+                    <video id="island-preview" class="case-study-video" width="960" height="660" muted loop playsinline preload="none" poster="img/island-barbers-preview.webp" aria-label="Scrolling preview of the Island Barbers website" aria-describedby="preview-description">
+                        <source data-src="media/island-barbers-preview.mp4" type="video/mp4">
+                        <a href="media/island-barbers-preview.mp4">Watch the Island Barbers website preview</a>.
+                    </video>
+                    <div class="preview-toolbar">
+                        <span id="preview-description">20-second website preview</span>
+                        <button type="button" class="preview-toggle" aria-controls="island-preview" hidden>Play preview</button>
                     </div>
+                    <noscript><p class="preview-fallback"><a href="media/island-barbers-preview.mp4">Watch the website preview</a></p></noscript>
                 </div>
                 <div class="case-study-content">
                     <div class="case-study-header">

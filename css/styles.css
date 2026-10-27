@@ -60,9 +60,16 @@ nav { position: sticky; top: 0; z-index: 1000; background: #101a1c; border-botto
 
 /* One real client project, with a working route to view the result. */
 .case-study-card { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid #304d50; border-radius: 1rem; overflow: hidden; background: var(--bg-elevated); }
-.case-study-image-wrap { position: relative; display: flex; align-items: center; background: #080c0d; min-width: 0; }
-.case-study-img { width: 100%; height: auto; }
-.case-study-live-badge { position: absolute; left: 1rem; top: 1rem; display: flex; align-items: center; gap: .5rem; border: 1px solid #42685c; border-radius: 2rem; background: #10221e; color: #b6e8d2; padding: .375rem .75rem; font-size: .8125rem; }
+.case-study-image-wrap { display: flex; flex-direction: column; justify-content: center; background: #080c0d; min-width: 0; }
+/* The preview reserves its space and retains a poster before playback. */
+.case-study-video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 11; background: #000; }
+.preview-heading, .preview-toolbar { display: flex; align-items: center; gap: .5rem; padding: .75rem 1rem; background: #10201f; color: #b6d4cc; font-size: .8125rem; }
+.preview-heading > span:last-child { margin-left: auto; color: #a5b7b8; }
+.preview-toolbar { justify-content: space-between; flex-wrap: wrap; }
+.preview-toggle { min-height: 44px; padding: .5rem .75rem; border: 1px solid #477679; border-radius: .5rem; background: #1b2b2e; color: #f4f8f7; font: inherit; cursor: pointer; }
+.preview-toggle:hover { background: #263c40; }
+.preview-toggle:disabled { cursor: default; opacity: .7; }
+.preview-fallback { padding: .75rem 1rem; font-size: .875rem; text-decoration: underline; }
 .live-dot { width: 7px; height: 7px; border-radius: 50%; background: #b6e8d2; }
 .case-study-content { padding: 2rem; display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
 .case-study-header { display: flex; gap: 1rem; align-items: center; }
@@ -129,8 +136,6 @@ footer { border-top: 1px solid var(--border-default); padding-top: 3rem; backgro
     .nav-links a { font-size: .875rem; }
     .services-grid, .pricing-grid { grid-template-columns: 1fr; }
     .case-study-card { grid-template-columns: 1fr; }
-    .case-study-image-wrap { max-height: 440px; overflow: hidden; }
-    .case-study-img { max-height: 440px; object-fit: contain; }
     .footer-content { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 900px) {
