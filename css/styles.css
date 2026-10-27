@@ -43,10 +43,10 @@ nav { position: sticky; top: 0; z-index: 1000; background: #101a1c; border-botto
 .burger-line { width: 20px; height: 2px; background: var(--text-primary); }
 .hero { padding-block: 5.5rem 5rem; text-align: center; background: radial-gradient(ellipse at top, #153134 0, var(--bg-base) 70%); }
 .hero-content { max-width: 850px; margin: auto; padding-inline: 1.5rem; }
-.hero-logo { width: 128px; height: auto; margin: 0 auto 1.5rem; border-radius: 50%; animation: logo-float 6s ease-in-out infinite; }
+.hero-logo { width: 128px; height: auto; margin: 0 auto 1.5rem; border-radius: 50%; animation: logo-float 2.8s cubic-bezier(0.45, 0, 0.55, 1) infinite; }
 @keyframes logo-float {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-8px); }
 }
 .hero .eyebrow { font-size: .8125rem; color: #8bd7d3; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 1.5rem; }
 .hero h1 { max-width: 760px; margin: 0 auto 1.5rem; }
