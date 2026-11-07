@@ -43,7 +43,7 @@ nav { position: sticky; top: 0; z-index: 1000; background: #101a1c; border-botto
 .burger-line { width: 20px; height: 2px; background: var(--text-primary); }
 .hero { padding-block: 5.5rem 5rem; text-align: center; background: radial-gradient(ellipse at top, #153134 0, var(--bg-base) 70%); }
 .hero-content { max-width: 850px; margin: auto; padding-inline: 1.5rem; }
-.hero-logo { width: 128px; height: auto; margin: 0 auto 1.5rem; border-radius: 50%; animation: logo-float 2.8s cubic-bezier(0.45, 0, 0.55, 1) infinite; }
+.hero-logo { width: 224px; height: auto; margin: 0 auto 1.5rem; border-radius: 50%; animation: logo-float 2.8s cubic-bezier(0.45, 0, 0.55, 1) infinite; }
 @keyframes logo-float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
@@ -126,7 +126,9 @@ footer { border-top: 1px solid var(--border-default); padding-top: 3rem; backgro
 .footer-content a { display: inline-block; padding-block: .5rem; overflow-wrap: anywhere; }
 .footer-bottom { padding: 1.5rem 1rem; border-top: 1px solid var(--border-default); text-align: center; font-size: .875rem; }
 .social-links { font-size: 1.5rem; }
-.floating-phone { position: fixed; right: 1rem; bottom: 1rem; z-index: 900; width: 48px; height: 48px; border-radius: 50%; background: #00727a; color: white; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px #0005; }
+.floating-phone, .floating-whatsapp { position: fixed; right: 1rem; bottom: 1rem; z-index: 900; width: 48px; height: 48px; border-radius: 50%; background: #00727a; color: white; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px #0005; }
+.floating-whatsapp { bottom: 4.75rem; background: #128c4a; font-size: 1.65rem; }
+.floating-whatsapp:hover { background: #0e703b; }
 .privacy-page { max-width: 800px; margin: auto; padding: 3rem 1.5rem; }
 .privacy-page h1 { margin-block: 2rem 1rem; }
 .privacy-page h2 { font-size: 1.375rem; margin-block: 2rem 1rem; }
@@ -149,7 +151,7 @@ footer { border-top: 1px solid var(--border-default); padding-top: 3rem; backgro
     .section-heading { text-align: left; margin-bottom: 2rem; }
     .hero { padding-block: 3rem; }
     .hero-content { padding-inline: 1.25rem; }
-    .hero-logo { width: 96px; margin-bottom: 1rem; }
+    .hero-logo { width: 192px; margin-bottom: 1rem; }
     .hero .eyebrow { font-size: .75rem; margin-bottom: 1rem; }
     .hero .body-lg { font-size: 1rem; }
     .hero-cta { flex-direction: column; }
@@ -157,7 +159,9 @@ footer { border-top: 1px solid var(--border-default); padding-top: 3rem; backgro
     .service-card, .pricing-card, .card, .case-study-content, .contact-form { padding: 1.5rem; }
     .team-card { flex-direction: column; gap: 1.5rem; }
     .case-study-actions { flex-direction: column; }
-    .floating-phone { right: .75rem; bottom: .75rem; }
+    .floating-phone, .floating-whatsapp { right: .75rem; }
+    .floating-phone { bottom: .75rem; }
+    .floating-whatsapp { bottom: 4.5rem; }
 }
 @media (max-width: 400px) {
     .footer-content { grid-template-columns: 1fr; }
